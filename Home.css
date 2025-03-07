@@ -1,0 +1,342 @@
+/* ✅ General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Removes horizontal scrollbar */
+    background-color: #f5f5f5; /* Light background */
+  }
+  
+  html, body {
+    overflow-x: hidden; 
+  }
+  
+  /* ✅ Header Styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, #f1f1f1, #f1f1f1, #ff5e00); 
+    height: 100px; 
+    padding: 20px; 
+    color: white;
+  }
+  
+  .icon {
+    height: 50px;
+  }
+  
+  .logo {
+    width: 300px;
+    cursor: pointer;
+  }
+  
+  .Searchbar {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 25px;
+    padding: 5px 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .searchBar {
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 200px;
+  }
+  
+  .searchIcon {
+    width: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  /* ✅ Dropdown (District Selector) */
+  .select {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .select:hover {
+    background-color: #f1f1f1;
+  }
+  
+  b {
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  /* ✅ Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px 20px;
+  }
+  
+  .nav-left,
+  .nav-right {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-item:hover {
+    border: 2px solid orange;
+    background-color: orange; /* Orange background on hover */
+    color: black; /* Text color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.8); /* Glowing effect */
+   }
+  
+  /* ✅ Section Title */
+  .addBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: #f8f9fa;
+  }
+  
+  .addBar h1 {
+    color: #007BFF;
+    font-size: 36px;
+  }
+  
+  .seeAll {
+    text-decoration: none;
+    color: #00C853;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .seeAll:hover {
+    text-decoration: underline;
+    color: #009624;
+  }
+  
+  /* ✅ Slider */
+  .slider {
+    width: 100%; 
+    height: 300px; 
+    overflow: hidden; 
+    position: relative;
+    margin: auto; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .slider-track {
+    display: flex;
+    animation: slide 12s infinite ease-in-out;
+    gap: 100px; /* Space between images */
+  }
+  
+  .slider img {
+    width: 300px; 
+    height: 95px; 
+    object-fit: cover; 
+    border-radius: 10px;
+  }
+  
+  @keyframes slide {
+    0%, 20% {
+      transform: translateX(0%);
+    }
+    25%, 45% {
+      transform: translateX(-100%);
+    }
+    50%, 70% {
+      transform: translateX(-200%);
+    }
+    75%, 95% {
+      transform: translateX(-300%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  /* ✅ Monuments Section */
+  .sectiondiv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px; /* Increased gap for more space between cards */
+    justify-content: left;
+    padding: 80px; /* Increased padding for better spacing */
+  }
+  
+  
+  .sectiondiv::-webkit-scrollbar {
+    display: none; 
+  }
+  
+  .section {
+    width: 250px; /* Slightly wider cards */
+    height: 420px; /* Taller cards */
+    padding: 25px; /* Increased padding inside cards */
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow for a premium look */
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+  }
+  
+  .section:hover {
+    transform: translateY(-10px);
+  }
+  
+  .section img {
+    width: 70%; 
+    height: 300px; 
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    align-content: center;
+  }
+  
+  .section img:hover {
+    transform: scale(1.1);
+  }
+  
+  .section h3 {
+    margin: 15px 0 5px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .section p {
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .black {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .black:hover {
+    color: #007BFF;
+  }
+  
+  /* ✅ Google Maps Section */
+  .mapdiv {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .map {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* ✅ Footer */
+  .footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+  }
+  
+  .footer a {
+    color: #00C853;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ✅ Responsive Design */
+  @media (max-width: 768px) {
+    .sectiondiv {
+      flex-direction: column;
+      align-items: center;
+      overflow-x: visible; 
+    }
+    
+    .section {
+      width: 90%;
+    }
+  }
+  .district-btn {
+  padding: 10px;
+  border: none;
+  background-color: #f76c6c;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.district-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.district-popup {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.district-popup input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+.district-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.district-item {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.district-item:hover {
+  background: #f4f4f4;
+}
+
+.close-btn {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

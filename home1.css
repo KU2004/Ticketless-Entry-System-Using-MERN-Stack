@@ -1,0 +1,392 @@
+/* ✅ General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Ensure no horizontal overflow */
+  background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+}
+
+/* ✅ Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #f1f1f1, #ff5e00);
+  height: auto;
+  padding: 20px;
+  color: white;
+  flex-wrap: wrap;
+  text-align: center;
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.icon {
+  height: 50px;
+}
+
+.logo {
+  width: 250px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* ✅ Search Bar */
+.Searchbar {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 25px;
+  padding: 5px 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+}
+
+.searchBar {
+  border: none;
+  outline: none;
+  padding: 8px;
+  width: 100%;
+}
+
+.searchIcon {
+  width: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* ✅ Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+  overflow-x: hidden; /* Ensure no horizontal overflow */
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  border: 2px solid orange;
+  background-color: orange;
+  color: black;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
+}
+
+/* ✅ Carousel Styles */
+.carousel-container {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-wrapper {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.carousel-card {
+  min-width: 250px;
+  max-width: 250px;
+  height: 380px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-card:hover img {
+  transform: scale(1.1);
+}
+
+.carousel-card:hover .card-text {
+  transform: translateY(10px);
+}
+
+/* ✅ Properly Align Links */
+.carousel-card a {
+  display: block;
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 5px;
+  transition: color 0.3s ease;
+}
+
+.carousel-card a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* ✅ Fix Navigation Buttons */
+.carousel-btn {
+  background-color: orange;
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn.left {
+  left: 10px;
+}
+
+.carousel-btn.right {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background-color: #ff4500;
+}
+
+/* ✅ Section Layout Fix */
+.sectiondiv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: left;
+  padding: 50px;
+  overflow-x: hidden; /* Ensure no horizontal overflow */
+}
+
+/* ✅ Section Styling */
+.section {
+  width: 220px;
+  height: 420px;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.section img {
+  width: 80%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.section:hover img {
+  transform: scale(1.1);
+}
+
+.section:hover .section-text {
+  transform: translateY(10px);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .logo {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+
+  .Searchbar {
+    width: 80%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectiondiv {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section {
+    width: 90%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-left, .nav-right {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* ✅ District Button */
+.district-btn {
+  padding: 10px 15px;
+  border: none;
+  background: #ff5e00;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.district-btn:hover {
+  background: #ff4500;
+}
+
+/* ✅ District Modal */
+.district-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.district-popup {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+.district-popup input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.district-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.district-item {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.district-item:hover {
+  background: #ff5e00;
+  color: white;
+}
+
+.close-btn {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background: darkred;
+}
+
+/* ✅ See All Link */
+.seeAll-right {
+  text-decoration: none;
+  color: #00C853;
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 0.3s ease;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.seeAll-right:hover {
+  text-decoration: underline;
+  color: #009624;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden; /* ✅ Forcefully hide horizontal scrolling */
+}

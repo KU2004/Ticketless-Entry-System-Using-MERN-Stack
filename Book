@@ -1,0 +1,253 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 2000px;
+  
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  margin-top: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+h2 {
+  color: #222;
+  font-size: 30px; /* Increased font size */
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #d32f2f;
+  display: inline-block;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Plan Visit */
+.plan-visit {
+  display: block;
+  font-size: 22px;
+  color: #444; /* Slightly darker for contrast */
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 20px;
+  
+}
+
+/* Container for date and action buttons */
+.date-button-container {
+  display: flex;
+  justify-content: flex-start; /* Aligns date buttons to the left */
+  align-items: center;
+  margin-bottom: 50px;
+  margin-right: 20px; /* Added margin to create space */
+  justify-content: space-between; 
+}
+
+/* Date Selector Container */
+.date-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start; /* Aligns date buttons to the left */
+}
+.action-btn .price-tag{
+  padding-left: 40px;
+}
+
+/* Action Buttons Container */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Date Buttons */
+.date-button {
+  background: #f8f8f8;
+  border: none;
+  padding: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  width: 90px; /* Ensures uniform width */
+  transition: background 0.3s ease-in-out, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+}
+.date-button .title{
+  font-size: 16px;
+  color: #000000;
+}
+.date-button:hover {
+  background: #d32f2f;
+  color: white;
+  transform: scale(1.05);
+}
+
+.date-button.selected {
+  background: #d32f2f;
+  color: white;
+  transform: scale(1.1);
+}
+.date-button.selected .title{
+  color: white;
+}
+
+/* Adjust misaligned dates */
+.date-button:first-child {
+  margin-left: auto;
+}
+
+.date-button:last-child {
+  margin-right: auto;
+}
+
+/* Monument Section */
+.monument-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+/* Time Slot Buttons */
+.time-slot-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px; /* Increased spacing */
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.time-slot-button {
+  padding: 14px 20px;
+  border: 1px solid #ddd;
+  background-color: white;
+  color: green;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  min-width: 130px;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.time-slot-button:hover {
+  background-color: #d4edda;
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.time-slot-button.selected {
+  background-color: #28a745;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Action Buttons */
+.action-btn {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 140px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Styles */
+.price-tag {
+  background: linear-gradient(45deg, #f39c12, #e67e22);
+  color: white;
+  padding: 12px 18px; /* Added more padding */
+}
+
+.price-tag:hover {
+  background: linear-gradient(45deg, #e67e22, #d35400);
+  transform: scale(1.05);
+}
+
+.time {
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  color: white;
+  padding: 12px 18px; /* Increased padding */
+}
+
+.time:hover {
+  background: linear-gradient(45deg, #2980b9, #2471a3);
+  transform: scale(1.05);
+}
+
+.history {
+  background: linear-gradient(45deg, #2ecc71, #27ae60);
+  color: white;
+  padding: 12px 18px;
+}
+
+.history:hover {
+  background: linear-gradient(45deg, #27ae60, #229954);
+  transform: scale(1.05);
+}
+
+/* Monument Actions */
+.monument-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end; /* Aligns buttons to the right */
+  flex-wrap: nowrap; /* Ensures buttons stay in a single line */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .date-selector {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .time-slot-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .monument-actions {
+    flex-wrap: wrap;
+    justify-content: right;
+    justify-content:space-between;
+    
+  }
+}
